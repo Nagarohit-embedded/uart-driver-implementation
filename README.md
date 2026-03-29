@@ -1,57 +1,55 @@
 # UART Driver Implementation in Embedded C
 
-This project demonstrates a UART (Universal Asynchronous Receiver-Transmitter) driver implemented using register-level programming in Embedded C.
+Embedded C implementation of UART driver using register-level programming with transmit and receive functionality.
 
 ## Overview
 
-The project implements a basic UART driver by directly accessing hardware registers. It includes initialization, data transmission, and data reception functionalities.
+This project demonstrates a UART driver implemented using low-level register access. It includes initialization, transmission, and reception functions.
 
 ## Features
 
 * UART initialization with configurable baud rate
-* Data transmission using UART_Send()
-* Data reception using UART_Receive()
-* Register-level programming (no external libraries)
-* Modular driver structure (header and source files)
+* Data transmission and reception
+* Register-level programming (no libraries)
+* Modular driver structure
 
-## Files Structure
+## File Structure
 
-* uart.c → UART driver implementation
+* main.c → Example usage of UART driver
+* uart.c → Driver implementation
 * uart.h → Function prototypes and macros
-* uart_reg.c → Simulated hardware registers
-* uart_reg.h → Register structure definitions
+* uart_reg.c → Simulated UART registers
+* uart_reg.h → Register definitions
 
 ## Working Principle
 
-UART communication works by transmitting data serially using TX and RX lines without a clock signal.
+UART is an asynchronous communication protocol that transmits data without a clock signal using TX and RX lines.
+
+Registers used:
 
 * CR1 → Control register (enable UART, TX, RX)
-* BRR → Baud rate configuration
-* DR → Data register for transmission/reception
+* BRR → Baud rate register
+* DR → Data register
 * SR → Status register (TXE, RXNE flags)
 
-## How It Works
+## How to Run
 
-1. UART_Init() configures baud rate and enables UART
-2. UART_Send() writes data to the data register
-3. UART_Receive() checks RX flag and reads received data
+1. Compile all files together
 
-## Code Explanation
+   gcc main.c uart.c uart_reg.c -o uart
+   
+2. Run the program
 
-* Bit manipulation is used to control hardware registers
-* TXE flag indicates transmission ready
-* RXNE flag indicates data received
-* Data is transferred using DR register
+   ./uart
 
 ## Applications
 
-* Microcontroller communication
-* Debugging via serial communication
-* Embedded system data transfer
-* Sensor and device interfacing
+* Embedded communication systems
+* Microcontroller data transfer
+* Debugging and logging
 
 ## Future Improvements
 
-* Interrupt-based UART communication
-* DMA support for high-speed transfer
+* Interrupt-based communication
+* DMA support
 * Error handling (parity, framing errors)
