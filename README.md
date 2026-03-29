@@ -53,7 +53,7 @@ uart-driver/
 
 ![Image](https://upload.wikimedia.org/wikipedia/commons/c/c2/UART_block_diagram.svg)
 
-![Image](https://www.researchgate.net/publication/254028865/figure/fig6/AS%3A668760394461195%401536456311696/Universal-Asynchronous-Receiver-Transmitter-UART-system-module-attached-with-the.png)
+![UART Block Diagram](https://upload.wikimedia.org/wikipedia/commons/3/3f/UART_block_diagram.svg)
 
 ![Image](https://www.researchgate.net/publication/340062601/figure/fig24/AS%3A871193624191015%401584720154984/UART-Data-Structure-The-start-bit-is-logical-LOW-and-the-stop-bit-is-logical-HIGH-These.png)
 
