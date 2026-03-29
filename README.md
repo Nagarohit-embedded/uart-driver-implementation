@@ -53,9 +53,6 @@ uart-driver/
 
 ![Image](https://upload.wikimedia.org/wikipedia/commons/c/c2/UART_block_diagram.svg)
 
-![UART Block Diagram](https://upload.wikimedia.org/wikipedia/commons/3/3f/UART_block_diagram.svg)
-
-![Image](https://www.researchgate.net/publication/340062601/figure/fig24/AS%3A871193624191015%401584720154984/UART-Data-Structure-The-start-bit-is-logical-LOW-and-the-stop-bit-is-logical-HIGH-These.png)
 
 ![Image](https://europe1.discourse-cdn.com/arduino/original/4X/7/6/d/76d7e8eb0c7dabdecdf30e8b87afc7e70d75291f.png)
 
