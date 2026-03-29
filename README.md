@@ -1,6 +1,6 @@
 # UART Driver Implementation (Embedded C)
 
-##  Overview
+## 🔹 Overview
 
 This project implements a **UART (Universal Asynchronous Receiver Transmitter) driver** using **register-level programming in Embedded C**.
 
@@ -8,9 +8,9 @@ The driver enables reliable **serial communication** between microcontroller and
 
 This project focuses on **low-level peripheral control**, without using any external libraries or HAL.
 
+---
 
-
-##  Features
+## 🔹 Features
 
 * UART Initialization (Baud rate configuration)
 * Data Transmission (TX)
@@ -19,20 +19,20 @@ This project focuses on **low-level peripheral control**, without using any exte
 * Register-level programming
 * Lightweight and efficient implementation
 
+---
 
-
-##  Technologies Used
+## 🔹 Technologies Used
 
 * Embedded C
 * STM32 / Generic Microcontroller
 * UART Protocol
 * Register-Level Programming
 
+---
 
+## 🔹 Project Structure
 
-##  Project Structure
-
-
+```
 uart-driver/
 │
 ├── inc/
@@ -45,28 +45,32 @@ uart-driver/
 │
 ├── main.c            // Example usage
 └── README.md
+```
 
+---
 
-
-
-##  UART Working Principle
+## 🔹 UART Working Principle
 
 ![Image](https://upload.wikimedia.org/wikipedia/commons/c/c2/UART_block_diagram.svg)
+
+![Image](https://www.researchgate.net/publication/254028865/figure/fig6/AS%3A668760394461195%401536456311696/Universal-Asynchronous-Receiver-Transmitter-UART-system-module-attached-with-the.ppm)
+
+![Image](https://www.researchgate.net/publication/340062601/figure/fig24/AS%3A871193624191015%401584720154984/UART-Data-Structure-The-start-bit-is-logical-LOW-and-the-stop-bit-is-logical-HIGH-These.ppm)
 
 ![Image](https://europe1.discourse-cdn.com/arduino/original/4X/7/6/d/76d7e8eb0c7dabdecdf30e8b87afc7e70d75291f.png)
 
 UART is an **asynchronous serial communication protocol**, meaning no clock signal is shared between devices.
 
-###  Communication Flow:
+### 🔸 Communication Flow:
 
 1. Data is loaded into the transmit register
 2. Converted into serial bits (start + data + stop bits)
 3. Sent over communication line
 4. Receiver reconstructs data from incoming bits
 
+---
 
-
-##  How It Works
+## 🔹 How It Works
 
 ### 1. Initialization
 
@@ -84,38 +88,39 @@ UART is an **asynchronous serial communication protocol**, meaning no clock sign
 * Wait for data availability
 * Read data from receive register
 
+---
 
+## 🔹 API Functions
 
-##  API Functions
+### 🔸 Initialize UART
 
-### Initialize UART
-c
+```c
 void UART_Init(void);
+```
 
+### 🔸 Send Single Character
 
-###  Send Single Character
-
-c
+```c
 void UART_SendChar(char data);
+```
 
+### 🔸 Receive Single Character
 
-###  Receive Single Character
-
-c
+```c
 char UART_ReceiveChar(void);
+```
 
+### 🔸 Send String
 
-###  Send String
-
-c
+```c
 void UART_SendString(char *str);
+```
 
+---
 
+## 🔹 Example Usage
 
-
-##  Example Usage
-
-c
+```c
 #include "uart.h"
 
 int main()
@@ -131,51 +136,52 @@ int main()
 
     while(1);
 }
+```
 
+---
 
-
-##  Output
+## 🔹 Output
 
 * Characters successfully transmitted via UART
 * Data received correctly from serial terminal
 * Verified communication between devices
 
+---
 
-
-##  Applications
+## 🔹 Applications
 
 * Serial communication between microcontrollers
 * Debugging using serial monitor
 * Sensor data transmission
 * Communication with modules (GPS, Bluetooth, etc.)
 
+---
 
-
-##  Key Learnings
+## 🔹 Key Learnings
 
 * Register-level programming
 * UART protocol implementation
 * Embedded system communication
 * Peripheral interfacing
 
+---
 
-
-##  Future Improvements
+## 🔹 Future Improvements
 
 * Interrupt-based UART
 * DMA-based communication
 * Error handling (parity, framing errors)
 * Integration with RTOS (FreeRTOS)
 
+---
 
-
-##  Author
+## 🔹 Author
 
 **Naga Rohit Anudeep N**
 Embedded Systems Engineer
 
+---
 
-
-##  Tags
+## 🔹 Tags
 
 Embedded C, UART Driver, STM32, Firmware Development, Register-Level Programming
